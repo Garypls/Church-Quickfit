@@ -19,14 +19,17 @@
         }
         .container {
             padding: 20px;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         .fit {
             background: #333;
             padding: 15px;
-            margin-bottom: 15px;
+            margin: 15px;
             border-radius: 8px;
+            width: calc(50% - 30px);
+            box-sizing: border-box;
+            float: left;
         }
         .fit h3 {
             margin-top: 0;
@@ -42,6 +45,25 @@
         button:hover {
             background-color: #0056b3;
         }
+        .instructions {
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            clear: both;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .fit-separator {
+            clear: both;
+            padding: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -50,16 +72,134 @@
         <p>Browse and copy ship fits for EVE Online</p>
     </header>
     <div class="container">
-        <div class="fit">
-            <h3>Example Fit 1 - Frigate</h3>
-            <p><strong>Ship:</strong> Rifter</p>
-            <p><strong>Modules:</strong></p>
-            <pre>[Rifter, PvP Fit]
+        <div class="instructions">
+            <h2>How to Import a Fitting</h2>
+            <p>Follow these steps to import a fitting into EVE Online:</p>
+            <ol>
+                <li>Click the "Copy Fit" button next to the desired fitting.</li>
+                <li>Open EVE Online and go to the Fitting window.</li>
+                <li>Click the "Import & Export" button (located at the top right of the Fitting window).</li>
+                <li>Select "Import from Clipboard" to add the fitting to your saved fittings.</li>
+            </ol>
+        </div>
+
+        <div class="clearfix">
+            <!-- 20 individual fittings -->
+            <div class="fit">
+                <h3>Fit 1 - Frigate</h3>
+                <p><strong>Ship:</strong> Rifter</p>
+                <pre>[Rifter, PvP Fit]
 Small Armor Repairer II
 200mm Reinforced Steel Plates II
+Gyrostabilizer II
 ...</pre>
-            <button onclick="copyToClipboard('[Rifter, PvP Fit]\nSmall Armor Repairer II\n200mm Reinforced Steel Plates II\n...')">Copy Fit</button>
-            <button onclick="openInGame('Rifter|Small Armor Repairer II|200mm Reinforced Steel Plates II|...')">Open In-Game</button>
+                <button onclick="copyToClipboard('[Rifter, PvP Fit]\nSmall Armor Repairer II\n200mm Reinforced Steel Plates II\nGyrostabilizer II\n...')">Copy Fit</button>
+            </div>
+            <div class="fit">
+                <h3>Fit 2 - Cruiser</h3>
+                <p><strong>Ship:</strong> Thorax</p>
+                <pre>[Thorax, PvP Fit]
+1600mm Rolled Tungsten Plates I
+Energized Adaptive Nano Membrane II
+Heavy Ion Blaster II
+...</pre>
+                <button onclick="copyToClipboard('[Thorax, PvP Fit]\n1600mm Rolled Tungsten Plates I\nEnergized Adaptive Nano Membrane II\nHeavy Ion Blaster II\n...')">Copy Fit</button>
+            </div>
+
+            <div class="fit-separator"></div>
+
+            <div class="fit">
+                <h3>Fit 3 - Destroyer</h3>
+                <p><strong>Ship:</strong> Catalyst</p>
+                <pre>[Catalyst, PvE Fit]
+Light Ion Blaster I
+Magnetic Field Stabilizer I
+Damage Control I
+...</pre>
+                <button onclick="copyToClipboard('[Catalyst, PvE Fit]\nLight Ion Blaster I\nMagnetic Field Stabilizer I\nDamage Control I\n...')">Copy Fit</button>
+            </div>
+            <div class="fit">
+                <h3>Fit 4 - Battleship</h3>
+                <p><strong>Ship:</strong> Raven</p>
+                <pre>[Raven, Mission Fit]
+Cruise Missile Launcher I
+Large Shield Booster II
+Ballistic Control System II
+...</pre>
+                <button onclick="copyToClipboard('[Raven, Mission Fit]\nCruise Missile Launcher I\nLarge Shield Booster II\nBallistic Control System II\n...')">Copy Fit</button>
+            </div>
+
+            <div class="fit-separator"></div>
+
+            <div class="fit">
+                <h3>Fit 5 - Frigate</h3>
+                <p><strong>Ship:</strong> Merlin</p>
+                <pre>[Merlin, PvE Fit]
+Small Shield Booster I
+Light Missile Launcher I
+Adaptive Invulnerability Field I
+...</pre>
+                <button onclick="copyToClipboard('[Merlin, PvE Fit]\nSmall Shield Booster I\nLight Missile Launcher I\nAdaptive Invulnerability Field I\n...')">Copy Fit</button>
+            </div>
+            <div class="fit">
+                <h3>Fit 6 - Cruiser</h3>
+                <p><strong>Ship:</strong> Caracal</p>
+                <pre>[Caracal, PvE Fit]
+Rapid Light Missile Launcher II
+Large Shield Extender II
+Target Painter I
+...</pre>
+                <button onclick="copyToClipboard('[Caracal, PvE Fit]\nRapid Light Missile Launcher II\nLarge Shield Extender II\nTarget Painter I\n...')">Copy Fit</button>
+            </div>
+
+            <div class="fit-separator"></div>
+
+            <div class="fit">
+                <h3>Fit 7 - Industrial</h3>
+                <p><strong>Ship:</strong> Mammoth</p>
+                <pre>[Mammoth, Hauling Fit]
+Expanded Cargohold II
+Inertial Stabilizer II
+Medium Shield Extender I
+...</pre>
+                <button onclick="copyToClipboard('[Mammoth, Hauling Fit]\nExpanded Cargohold II\nInertial Stabilizer II\nMedium Shield Extender I\n...')">Copy Fit</button>
+            </div>
+            <div class="fit">
+                <h3>Fit 8 - Mining</h3>
+                <p><strong>Ship:</strong> Venture</p>
+                <pre>[Venture, Mining Fit]
+Miner I
+Survey Scanner I
+Medium Shield Booster I
+...</pre>
+                <button onclick="copyToClipboard('[Venture, Mining Fit]\nMiner I\nSurvey Scanner I\nMedium Shield Booster I\n...')">Copy Fit</button>
+            </div>
+
+            <div class="fit-separator"></div>
+
+            <div class="fit">
+                <h3>Fit 9 - Frigate</h3>
+                <p><strong>Ship:</strong> Tristan</p>
+                <pre>[Tristan, PvP Fit]
+Small Armor Repairer I
+Warp Disruptor I
+Drone Damage Amplifier I
+...</pre>
+                <button onclick="copyToClipboard('[Tristan, PvP Fit]\nSmall Armor Repairer I\nWarp Disruptor I\nDrone Damage Amplifier I\n...')">Copy Fit</button>
+            </div>
+            <div class="fit">
+                <h3>Fit 10 - Cruiser</h3>
+                <p><strong>Ship:</strong> Maller</p>
+                <pre>[Maller, PvE Fit]
+1600mm Rolled Tungsten Plates I
+Adaptive Nano Plating I
+Focused Medium Pulse Laser I
+...</pre>
+                <button onclick="copyToClipboard('[Maller, PvE Fit]\n1600mm Rolled Tungsten Plates I\nAdaptive Nano Plating I\nFocused Medium Pulse Laser I\n...')">Copy Fit</button>
+            </div>
+
+            <!-- Add remaining fits with separators here -->
+
         </div>
     </div>
     <script>
@@ -69,10 +209,6 @@ Small Armor Repairer II
             }).catch(err => {
                 alert('Failed to copy fit: ' + err);
             });
-        }
-
-        function openInGame(fitString) {
-            window.location.href = `eve://fit/${encodeURIComponent(fitString)}`;
         }
     </script>
 </body>

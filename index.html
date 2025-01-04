@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Quickfits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+        }
+        header {
+            background-color: #0d0d0d;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .fit {
+            background: #333;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 8px;
+            width: calc(50% - 30px);
+            box-sizing: border-box;
+            float: left;
+        }
+        .fit h3 {
+            margin-top: 0;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .instructions {
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            clear: both;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Church of Tranquility</h1>
+        <p>Browse and copy ship doctrine fits.</p>
+    </header>
+    <div class="container">
+        <div class="instructions">
+            <h2>How to Import a Fitting</h2>
+            <p>Follow these steps to import a fitting into EVE Online:</p>
+            <ol>
+                <li>Click the "Copy Fit" button next to the desired fitting.</li>
+                <li>Open EVE Online and go to the fitting window.</li>
+                <li>Click the "Import & Export" arrow (located at the bottom left of the fitting window next to "browse").</li>
+                <li>Select "Import from Clipboard" to add the fitting to your saved fittings.</li>
+            </ol>
+        </div>
+
+        <div class="clearfix">
+            <!-- Generate 20 individual fittings -->
+            <div class="fit">
+                <h3>Fit 1 - Frigate</h3>
+                <p><strong>Ship:</strong> Rifter</p>
+                <pre>[Rifter, PvP Fit]
+Small Armor Repairer II
+200mm Reinforced Steel Plates II
+...</pre>
+                <button onclick="copyToClipboard('[Rifter, PvP Fit]\nSmall Armor Repairer II\n200mm Reinforced Steel Plates II\n...')">Copy Fit</button>
+            </div>
+            <div class="fit">
+                <h3>Fit 2 - Cruiser</h3>
+                <p><strong>Ship:</strong> Thorax</p>
+                <pre>[Thorax, PvP Fit]
+1600mm Rolled Tungsten Plates I
+Energized Adaptive Nano Membrane II
+...</pre>
+                <button onclick="copyToClipboard('[Thorax, PvP Fit]\n1600mm Rolled Tungsten Plates I\nEnergized Adaptive Nano Membrane II\n...')">Copy Fit</button>
+            </div>
+            <div class="fit">
+                <h3>Fit 3 - Destroyer</h3>
+                <p><strong>Ship:</strong> Catalyst</p>
+                <pre>[Catalyst, PvE Fit]
+Light Ion Blaster I
+Magnetic Field Stabilizer I
+...</pre>
+                <button onclick="copyToClipboard('[Thorax, PvP Fit]\n1600mm Rolled Tungsten Plates I\nEnergized Adaptive Nano Membrane II\n...')">Copy Fit</button>
+            </div>
+            <div class="fit">
+                <h3>Fit 3 - Destroyer</h3>
+                <p><strong>Ship:</strong> Catalyst</p>
+                <pre>[Catalyst, PvE Fit]
+Light Ion Blaster I
+Magnetic Field Stabilizer I
+...</pre>
+                <button onclick="copyToClipboard('[Catalyst, PvE Fit]\nLight Ion Blaster I\nMagnetic Field Stabilizer I\n...')">Copy Fit</button>
+            </div>
+            <div class="fit">
+                <h3>Fit 4 - Battleship</h3>
+                <p><strong>Ship:</strong> Raven</p>
+                <pre>[Raven, Mission Fit]
+Cruise Missile Launcher I
+Large Shield Booster II
+...</pre>
+                <button onclick="copyToClipboard('[Raven, Mission Fit]\nCruise Missile Launcher I\nLarge Shield Booster II\n...')">Copy Fit</button>
+            </div>
+            <!-- Placeholder for fits 5 through 20 -->
+            <!-- Add similar sections for all remaining fits -->
+            <div class="fit">
+                <h3>Fit 5 - Example Ship</h3>
+                <p><strong>Ship:</strong> Example</p>
+                <pre>[Example, Example Fit]
+Example Module I
+Example Module II
+...</pre>
+                <button onclick="copyToClipboard('[Example, Example Fit]\nExample Module I\nExample Module II\n...')">Copy Fit</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Fit copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy fit: ' + err);
+            });
+        }
+    </script>
+</body>
+</html>

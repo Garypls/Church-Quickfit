@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Quickfits v1.4</title>
+    <title>Church Quickfits v1.5</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,6 +16,13 @@
             background-color: #0d0d0d;
             padding: 20px;
             text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
         }
         .container {
             padding: 20px;
@@ -50,7 +57,6 @@
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 20px;
-            clear: both;
         }
         .instructions ol {
             padding-left: 20px;
@@ -65,16 +71,18 @@
 <body>
     <header>
         <h1>Church of Tranquility</h1>
-        <p>Browse and copy ship doctrine fits.</p>
+        <p><i>Si vis pacem, para bellum</i></p>
     </header>
+
     <div class="container">
+        <!-- Instructions Section -->
         <div class="instructions">
-			<h2>How to Search a Ship</h2>
-			<ol>
-				<li>Press "CTRL + F".</li>
-				<li>Enter ship name you're looking for and use search arrows.</li>
-			</ol>
-            <h2>How to Import a Fitting</h2>
+            <h3>How to Search a Ship</h3>
+            <ol>
+                <li>Press "CTRL + F".</li>
+                <li>Enter the ship name you're looking for and use the search arrows.</li>
+            </ol>
+            <h3>How to Import a Fitting</h3>
             <ol>
                 <li>Click the "Copy Fit" button next to the desired fitting.</li>
                 <li>Open EVE Online and go to the fitting window.</li>
@@ -83,28 +91,72 @@
             </ol>
         </div>
 
-        <div class="clearfix">
-            <!-- Generate 20 individual fittings -->
-            <div class="fit">
-                <h3>GOONS - DAKKAFLEET</h3>
-                <p><strong>Ship:</strong> Sleipnir</p>
-                <pre>
-Notes: Put refit modules in cargo.				
-</pre>
-                <button onclick="copyToClipboard('[Sleipnir, GSF - DAKKA - DPS V23.1]
- 
+        <!-- Fit 1 -->
+        <div class="fit">
+            <h3>GOONS - DAKKAFLEET</h3>
+            <p><strong>Ship:</strong> Sleipnir</p>
+            <pre>Notes: Put refit modules in cargo.</pre>
+            <button onclick="copyToClipboard(fits.sleipnir)">Copy Fit</button>
+        </div>
+
+        <!-- Fit 2 -->
+        <div class="fit">
+            <h3>GOONS - CFIS</h3>
+            <p><strong>Ship:</strong> Cyclone Fleet Issue</p>
+            <pre>Notes: N/A</pre>
+            <button onclick="copyToClipboard(fits.cfis)">Copy Fit</button>
+        </div>
+
+        <!-- Fit 3 -->
+        <div class="fit">
+            <h3>GOONS - HAMMERFLEET</h3>
+            <p><strong>Ship:</strong> Ferox Navy Issue</p>
+            <pre>Notes: Put refit modules in cargo.</pre>
+            <button onclick="copyToClipboard(fits.hammerfleet)">Copy Fit</button>
+        </div>
+		
+		<!-- Fit 4 -->
+        <div class="fit">
+            <h3>GOONS - ENIS</h3>
+            <p><strong>Ship:</strong> Exequror Navy Issue</p>
+            <pre>Notes: N/A</pre>
+            <button onclick="copyToClipboard(fits.enis)">Copy Fit</button>
+        </div>
+		
+		<!-- Fit 5 -->
+        <div class="fit">
+            <h3>GOONS - FLYCATCHERS</h3>
+            <p><strong>Ship:</strong> Flycatcher</p>
+            <pre>Notes: Defender Launcher in cargo. Fit meta Shield Extender if over power.</pre>
+            <button onclick="copyToClipboard(fits.flycatchers)">Copy Fit</button>
+        </div>
+		
+        <!-- Fit 6 -->
+        <div class="fit">
+            <h3>GOONS - VOID RAYS</h3>
+            <p><strong>Ship:</strong> Kikimora</p>
+            <pre>Notes: Put refit modules in cargo.</pre>
+            <button onclick="copyToClipboard(fits.voidrays)">Copy Fit</button>
+        </div>
+    </div>
+
+    <script>
+        // Store all fits in a centralized object
+        const fits = {
+            sleipnir: `[Sleipnir, GSF - DAKKA - DPS V23.1]
+
 Gyrostabilizer II
 Gyrostabilizer II
 Nanofiber Internal Structure II
 Damage Control II
 Tracking Enhancer II
- 
+
 Large Shield Extender II
 Multispectrum Shield Hardener II
 Large Shield Extender II
 Multispectrum Shield Hardener II
 50MN Quad LiF Restrained Microwarpdrive
- 
+
 720mm Howitzer Artillery II, Republic Fleet Fusion M
 720mm Howitzer Artillery II, Republic Fleet Fusion M
 Drone Link Augmentor II
@@ -112,14 +164,12 @@ Drone Link Augmentor II
 Small Energy Neutralizer II
 720mm Howitzer Artillery II, Republic Fleet Fusion M
 720mm Howitzer Artillery II, Republic Fleet Fusion M
- 
+
 Medium Core Defense Field Extender II
 Medium Core Defense Field Extender II
- 
- 
+
 Warrior II x5
- 
- 
+
 Quake M x2000
 Tremor M x1200
 Nanite Repair Paste x100
@@ -142,16 +192,9 @@ Skirmish Command Burst II x1
 Nanofiber Internal Structure II x1
 Power Diagnostic System II x2
 Small EMP Smartbomb II x1
-Tracking Enhancer II x1
-')">Copy Fit</button>
-            </div>
-            <div class="fit">
-                <h3>GOONS - CFIS</h3>
-                <p><strong>Ship:</strong> Cyclone Fleet Issue</p>
-                <pre>
-Notes: N/A
-</pre>
-                <button onclick="copyToClipboard('[Cyclone Fleet Issue, CFI]
+Tracking Enhancer II x1`,
+
+            cfis: `[Cyclone Fleet Issue, CFI]
 Damage Control II
 Signal Amplifier II
 Ballistic Control System II
@@ -177,8 +220,6 @@ Medium EM Shield Reinforcer II
 Medium Thermal Shield Reinforcer II
 Medium Hydraulic Bay Thrusters II
 
-
-
 Valkyrie II x5
 
 Scourge Fury Heavy Missile x1440
@@ -191,16 +232,9 @@ Nanite Repair Paste x100
 Mjolnir Fury Heavy Missile x1440
 Inferno Fury Heavy Missile x1440
 Synth Crash Booster x1
-Agency 'Pyrolancea' DB3 Dose I x1
-')">Copy Fit</button>
-            </div>
-            <div class="fit">
-                <h3>GOONS - HAMMERFLEET</h3>
-                <p><strong>Ship:</strong> Ferox Navy Issue</p>
-                <pre>
-Notes: Put refit modules in cargo.				
-</pre>
-                <button onclick="copyToClipboard('[Ferox Navy Issue, FNI]
+Agency 'Pyrolancea' DB3 Dose I x1`,
+
+            hammerfleet: `[Ferox Navy Issue, FNI]
 Damage Control II
 Magnetic Field Stabilizer II
 Magnetic Field Stabilizer II
@@ -226,8 +260,6 @@ Medium Core Defense Field Extender I
 Medium Core Defense Field Extender I
 Medium Core Defense Field Extender I
 
-
-
 Warrior II x5
 
 Javelin M x1920
@@ -243,16 +275,9 @@ Synth Frentix Booster x1
 Agency 'Pyrolancea' DB3 Dose I x1
 Multispectrum Shield Hardener II x1
 Small Energy Neutralizer II x1
-Tracking Enhancer II x1
-')">Copy Fit</button>
-            </div>
-            <div class="fit">
-                <h3>GOONS - ENIS</h3>
-                <p><strong>Ship:</strong> Exequror Navy Issue</p>
-                <pre>
-Notes: N/A				
-</pre>
-                <button onclick="[Exequror Navy Issue, ENI]
+Tracking Enhancer II x1`,
+
+			enis: `[Exequror Navy Issue, ENI]
 Damage Control II
 Multispectrum Energized Membrane II
 Multispectrum Energized Membrane II
@@ -289,17 +314,9 @@ Scan Resolution Script x1
 Caldari Navy Thorium Charge M x640
 Caldari Navy Iridium Charge M x640
 Nanite Repair Paste x100
-Agency 'Pyrolancea' DB3 Dose I x1
-')">Copy Fit</button>
-            </div>
-            <div class="fit">
-                <h3>GOONS - FLYCATCHERS</h3>
-                <p><strong>Ship:</strong> Flycatcher</p>
-                <pre>
-Notes: Defender Launcher in cargo. Use meta shield extender if over power.
-</pre>
-                <button onclick="copyToClipboard('[Flycatcher, GSF - Flycatchers - DPS V23.1]
+Agency 'Pyrolancea' DB3 Dose I x1`,
 
+			flycatchers: `[Flycatcher, GSF - Flycatchers - DPS V23.1]
 Co-Processor II
 
 Enduring Multispectrum Shield Hardener
@@ -334,17 +351,9 @@ Missile Precision Script x1
 Missile Range Script x1
 Nanite Repair Paste x50
 Defender Launcher I x1
-Warp Scrambler II x1
-')">Copy Fit</button>
-            </div>
-            <!-- Placeholder for fits 5 through 20 -->
-            <div class="fit">
-                <h3>GOONS - VOID RAYS</h3>
-                <p><strong>Ship:</strong> Kikimora</p>
-                <pre>
-Notes: Put refit modules in cargo.
-</pre>
-                <button onclick="copyToClipboard('[Kikimora, GSF Standard v23.2]
+Warp Scrambler II x1`,
+
+			voidrays: `[Kikimora, GSF Standard v23.2]
  
 Entropic Radiation Sink II
 Entropic Radiation Sink II
@@ -370,16 +379,14 @@ Meson Exotic Plasma S x3000
 Tetryon Exotic Plasma S x3000
 Nanite Repair Paste x100
 Small Gremlin Compact Energy Neutralizer x1
-1MN Y-S8 Compact Afterburner x1
-')">Copy Fit</button>
-            </div>
-        </div>
-    </div>
-    <script>
+1MN Y-S8 Compact Afterburner x1`
+			};
+
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
                 alert('Fit copied to clipboard!');
             }).catch(err => {
+                console.error('Copy failed:', err);
                 alert('Failed to copy fit: ' + err);
             });
         }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Quickfits v1.6</title>
+    <title>Church Quickfits v1.7</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,9 +34,9 @@
             padding: 15px;
             margin: 15px;
             border-radius: 8px;
-            width: calc(50% - 30px);
+            width: 100%; /* Make it full-width for vertical stacking */
             box-sizing: border-box;
-            float: left;
+            margin-bottom: 20px; /* Add space between each fit block */
         }
         .fit h3 {
             margin-top: 0;
@@ -61,6 +61,9 @@
         .instructions ol {
             padding-left: 20px;
         }
+        section {
+            margin-bottom: 40px; /* Add space between different sections */
+        }
         .clearfix::after {
             content: "";
             display: table;
@@ -74,25 +77,57 @@
         <p><i>"Si vis pacem, para bellum"</i> - Publius Flavius Vegetius Renatus</p>
         <p><i>"No better pilot I ever saw than Avery and Gary"</i> - Diequietly</p>
 	</header>
-
+	
     <div class="container">
-        <!-- Instructions Section -->
-        <div class="instructions">
-            <h3>How to Search a Ship</h3>
-            <ol>
-                <li>Press "CTRL + F".</li>
-                <li>Enter the ship name you're looking for and use the search arrows.</li>
-            </ol>
-            <h3>How to Import a Fitting</h3>
-            <ol>
-                <li>Click the "Copy Fit" button next to the desired fitting.</li>
-                <li>Open EVE Online and go to the fitting window.</li>
-                <li>Click the "Import & Export" arrow (located at the bottom left of the fitting window next to "browse").</li>
-                <li>Select "Import from Clipboard" to add the fitting to your saved fittings.</li>
-            </ol>
-        </div>
+    <!-- Instructions Section -->
+    <div class="instructions">
+        <h3>How to Search a Ship</h3>
+        <ol>
+            <li>Press "CTRL + F".</li>
+            <li>Enter the ship name you're looking for and use the search arrows.</li>
+        </ol>
+        <h3>How to Import a Fitting</h3>
+        <ol>
+            <li>Click the "Copy Fit" button next to the desired fitting.</li>
+            <li>Open EVE Online and go to the fitting window.</li>
+            <li>Click the "Import & Export" arrow (located at the bottom left of the fitting window next to "browse").</li>
+            <li>Select "Import from Clipboard" to add the fitting to your saved fittings.</li>
+        </ol>
+    </div>
 
-        <!-- Fit 1 -->
+    <header>
+        <h2>Goonswarm Doctrines</h2>
+        <p>Use these fits when forming in UALX-3</p>
+    </header>
+    
+    <!-- Battleship Section -->
+    <section class="battleship-section">
+        <div class="centered-text">
+            <h2>Battleship</h2>
+        </div>
+    
+        <div class="fit">
+            <h3>GOONS - TOMAHAWKS</h3>
+            <p><strong>Ship:</strong> Raven Navy Issue</p>
+            <pre>Notes: Suggested to use implants. Put refit in cargo.</pre>
+            <button onclick="copyToClipboard(fits.tomahawks)">Copy Fit</button>
+        </div> 
+
+ 
+        <div class="fit">
+            <h3>GOONS - SUPERTRAINS</h3>
+            <p><strong>Ship:</strong> Rohk</p>
+            <pre>Notes: Suggested to use implants. Put refit in cargo.</pre>
+            <button onclick="copyToClipboard(fits.supertrains)">Copy Fit</button>
+        </div>   		
+    </section>
+
+    <!-- Battlecruiser Section -->
+    <section class="battlecruiser-section">
+        <div class="centered-text">
+            <h2>Battlecruiser</h2>
+        </div>
+        
         <div class="fit">
             <h3>GOONS - DAKKAFLEET</h3>
             <p><strong>Ship:</strong> Sleipnir</p>
@@ -100,7 +135,7 @@
             <button onclick="copyToClipboard(fits.sleipnir)">Copy Fit</button>
         </div>
 
-        <!-- Fit 2 -->
+        
         <div class="fit">
             <h3>GOONS - CFIS</h3>
             <p><strong>Ship:</strong> Cyclone Fleet Issue</p>
@@ -108,38 +143,66 @@
             <button onclick="copyToClipboard(fits.cfis)">Copy Fit</button>
         </div>
 
-        <!-- Fit 3 -->
+        
         <div class="fit">
             <h3>GOONS - HAMMERFLEET</h3>
             <p><strong>Ship:</strong> Ferox Navy Issue</p>
             <pre>Notes: Put refit modules in cargo.</pre>
             <button onclick="copyToClipboard(fits.hammerfleet)">Copy Fit</button>
         </div>
-		
-		<!-- Fit 4 -->
-        <div class="fit">
+    </section>
+
+    <!-- Cruiser Section -->
+    <section class="cruiser-section">
+        <div class="centered-text">
+            <h2>Cruiser</h2>
+        </div>
+        
+		<div class="fit">
             <h3>GOONS - ENIS</h3>
             <p><strong>Ship:</strong> Exequror Navy Issue</p>
             <pre>Notes: N/A</pre>
             <button onclick="copyToClipboard(fits.enis)">Copy Fit</button>
         </div>
-		
-		<!-- Fit 5 -->
-        <div class="fit">
+    </section>
+	
+	<!-- Destroyer Section -->
+	<section class="destroyer-section">
+        <div class="centered-text">
+            <h2>Destroyer</h2>
+        </div>
+        
+		<div class="fit">
             <h3>GOONS - FLYCATCHERS</h3>
             <p><strong>Ship:</strong> Flycatcher</p>
             <pre>Notes: Defender Launcher in cargo. Fit meta Shield Extender if over power.</pre>
             <button onclick="copyToClipboard(fits.flycatchers)">Copy Fit</button>
         </div>
 		
-        <!-- Fit 6 -->
-        <div class="fit">
+		
+		<div class="fit">
             <h3>GOONS - VOID RAYS</h3>
             <p><strong>Ship:</strong> Kikimora</p>
             <pre>Notes: Put refit modules in cargo.</pre>
             <button onclick="copyToClipboard(fits.voidrays)">Copy Fit</button>
         </div>
-    </div>
+    </section>
+	
+		<!-- Frigate Section -->
+	<section class="frigate-section">
+        <div class="centered-text">
+            <h2>Frigate</h2>
+        </div>
+        
+        <div class="fit">
+            <h3>GOONS - FIT ME</h3>
+            <p><strong>Ship:</strong> FIT ME</p>
+            <pre>Notes: N/A</pre>
+            <button onclick="copyToClipboard(fits.voidrays)">Copy Fit</button>
+        </div>
+    </section>
+</div>
+
 
     <script>
         // Store all fits in a centralized object
@@ -380,7 +443,115 @@ Meson Exotic Plasma S x3000
 Tetryon Exotic Plasma S x3000
 Nanite Repair Paste x100
 Small Gremlin Compact Energy Neutralizer x1
-1MN Y-S8 Compact Afterburner x1`
+1MN Y-S8 Compact Afterburner x1`,
+
+			tomahawks: `[Raven Navy Issue, GSF - RNI - DPS - v24.2]
+ 
+Damage Control II
+Ballistic Control System II
+Ballistic Control System II
+Ballistic Control System II
+Signal Amplifier II
+ 
+Multispectrum Shield Hardener II
+Heavy Capacitor Booster II
+Large Shield Extender II
+500MN Quad LiF Restrained Microwarpdrive
+Large Shield Extender II
+Large Shield Extender II
+Multispectrum Shield Hardener II
+ 
+Cruise Missile Launcher II
+Cruise Missile Launcher II
+Cruise Missile Launcher II
+Cruise Missile Launcher II
+Cruise Missile Launcher II
+Cruise Missile Launcher II
+Cruise Missile Launcher II
+Cruise Missile Launcher II
+ 
+Large Core Defense Field Extender I
+Large Core Defense Field Extender I
+Large Core Defense Field Extender I
+ 
+ 
+Warrior II x5
+Valkyrie II x5
+Hornet EC-300 x5
+ 
+ 
+Inferno Fury Cruise Missile x864
+Mjolnir Fury Cruise Missile x864
+Nova Fury Cruise Missile x864
+Scourge Fury Cruise Missile x648
+Navy Cap Booster 800 x13
+Caldari Navy Inferno Cruise Missile x1080
+Caldari Navy Mjolnir Cruise Missile x1080
+Caldari Navy Nova Cruise Missile x1080
+Caldari Navy Scourge Cruise Missile x1080
+Missile Precision Script x1
+Missile Range Script x1
+Nanite Repair Paste x50
+Scan Resolution Script x1
+Targeting Range Script x1
+Agency 'Pyrolancea' DB3 Dose I x1
+Missile Guidance Computer II x1
+Missile Guidance Enhancer II x2
+Sensor Booster II x1
+EM Shield Hardener II x1
+Signal Amplifier II x1`,
+
+			supertrains: `[Rokh, SuperTrain mk 4A]
+Damage Control II
+Magnetic Field Stabilizer II
+Magnetic Field Stabilizer II
+Signal Amplifier II
+ 
+Multispectrum Shield Hardener II
+Large Shield Extender II
+Medium Capacitor Booster II
+100MN Afterburner II
+EM Shield Hardener II
+Large Shield Extender II
+Multispectrum Shield Hardener II
+ 
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+ 
+Large Core Defense Field Extender I
+Large Core Defense Field Extender I
+Large Core Defense Field Extender I
+ 
+ 
+Warrior II x5
+Curator II x3
+Hornet EC-300 x5
+ 
+ 
+Javelin L x960
+Spike L x3200
+Navy Cap Booster 800 x18
+Caldari Navy Antimatter Charge L x3200
+Caldari Navy Iridium Charge L x960
+Caldari Navy Iron Charge L x960
+Caldari Navy Thorium Charge L x1600
+ECCM Script x1
+Targeting Range Script x1
+Optimal Range Script x1
+Tracking Speed Script x1
+Improved Frentix Booster x2
+Magnetic Field Stabilizer II x1
+500MN Quad LiF Restrained Microwarpdrive x1
+Sensor Booster II x1
+Large Shield Extender II x1
+Thermal Shield Hardener II x1
+Tracking Computer II x1`
 			};
 
         function copyToClipboard(text) {

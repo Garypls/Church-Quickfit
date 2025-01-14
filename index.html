@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Quickfits v1.92</title>
+    <title>Church Quickfits v1.93</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -239,6 +239,28 @@
             <p><strong>Ship:</strong> Hound T2</p>
             <pre>Notes: N/A</pre>
             <button onclick="copyToClipboard(fits.houndt2)">Copy Fit</button>
+        </div>
+    </section>
+	
+	<!-- Booster Section -->
+	<section class="booster-section">
+        <div class="centered-text">
+            <h2>Booster</h2>
+        </div>
+        
+        <div class="fit">
+            <h3>GOONS - BOOSTERS</h3>
+            <p><strong>Ship:</strong> Bifrost</p>
+            <pre>Notes: Put refit modules in cargo. Usable in Harpy and Flycatcher fleets.</pre>
+            <button onclick="copyToClipboard(fits.bifrost)">Copy Fit</button>
+        </div>
+		
+		
+		<div class="fit">
+            <h3>GOONS - BOOSTERS</h3>
+            <p><strong>Ship:</strong> Stork</p>
+            <pre>Notes: Put refit modules in cargo. Use Mindlink. Usable in Harpy and Flycatcher fleets.</pre>
+            <button onclick="copyToClipboard(fits.stork)">Copy Fit</button>
         </div>
     </section>
 </div>
@@ -777,7 +799,78 @@ Focused Void Bomb x2
 Nanite Repair Paste x20
 Scan Resolution Dampening Script x1
 Targeting Range Dampening Script x1
-Caldari Navy Nova Torpedo x480`
+Caldari Navy Nova Torpedo x480`,
+
+			bifrost: `[Bifrost, GSF - Flycatchers - Boost - V23.1]
+Damage Control II
+Co-Processor II
+Power Diagnostic System II
+
+5MN Quad LiF Restrained Microwarpdrive
+Republic Fleet Medium Shield Extender
+Republic Fleet Medium Shield Extender
+Enduring Multispectrum Shield Hardener
+Enduring Multispectrum Shield Hardener
+
+Arbalest Compact Light Missile Launcher
+Defender Launcher I, Defender Missile I
+Skirmish Command Burst II
+Skirmish Command Burst II
+Shield Command Burst II /OFFLINE
+Shield Command Burst II /OFFLINE
+
+Small Command Processor I
+Small Core Defense Field Extender II
+
+
+Defender Missile I x100
+Scourge Light Missile x120
+Nanite Repair Paste x100
+Active Shielding Charge x600
+Shield Extension Charge x600
+Shield Harmonizing Charge x600
+Evasive Maneuvers Charge x600
+Interdiction Maneuvers Charge x600
+Rapid Deployment Charge x600
+Micro Jump Field Generator x1
+Overdrive Injector System II x1
+1MN Afterburner II x1
+Reactor Control Unit II x1`,
+
+			stork: `[Stork, GSF - Flycatchers - Boost - V23.1]
+Damage Control II
+Mark I Compact Power Diagnostic System
+
+Multispectrum Shield Hardener II
+Small F-S9 Regolith Compact Shield Extender
+EM Shield Amplifier II
+5MN Quad LiF Restrained Microwarpdrive
+Medium Shield Extender II
+Medium Shield Extender II
+
+Information Command Burst II
+Information Command Burst II
+Defender Launcher I
+[Empty High slot]
+Shield Command Burst II, Shield Extension Charge /OFFLINE
+Shield Command Burst II, Shield Harmonizing Charge /OFFLINE
+
+Small Core Defense Field Extender II
+Small Command Processor I
+
+
+Information Command Mindlink
+
+
+Defender Missile I x100
+Electronic Hardening Charge x2000
+Electronic Superiority Charge x2000
+Sensor Optimization Charge x2000
+Nanite Repair Paste x100
+Active Shielding Charge x2000
+Shield Extension Charge x2000
+Shield Harmonizing Charge x2000
+1MN Afterburner II x1`
 			};
 
         function copyToClipboard(text) {

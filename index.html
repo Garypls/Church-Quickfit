@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Quickfits v1.7</title>
+    <title>Church Quickfits v1.8</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -150,6 +150,22 @@
             <pre>Notes: Put refit modules in cargo.</pre>
             <button onclick="copyToClipboard(fits.hammerfleet)">Copy Fit</button>
         </div>
+		
+		
+		<div class="fit">
+            <h3>GOONS - MALLETFLEET</h3>
+            <p><strong>Ship:</strong> Ferox</p>
+            <pre>Notes: If short on power use EG-603 implant (train Advanced Weapon Upgrades to 5 you noob).</pre>
+            <button onclick="copyToClipboard(fits.malletfleet)">Copy Fit</button>
+        </div>
+		
+		
+		<div class="fit">
+            <h3>GOONS - WINDRUNNERS</h3>
+            <p><strong>Ship:</strong> Tornado</p>
+            <pre>Notes: Put refit modules in cargo.</pre>
+            <button onclick="copyToClipboard(fits.windrunners)">Copy Fit</button>
+        </div>
     </section>
 
     <!-- Cruiser Section -->
@@ -188,7 +204,7 @@
         </div>
     </section>
 	
-		<!-- Frigate Section -->
+	<!-- Frigate Section -->
 	<section class="frigate-section">
         <div class="centered-text">
             <h2>Frigate</h2>
@@ -205,10 +221,9 @@
 
 
     <script>
-        // Store all fits in a centralized object
+        // fits define
         const fits = {
             sleipnir: `[Sleipnir, GSF - DAKKA - DPS V23.1]
-
 Gyrostabilizer II
 Gyrostabilizer II
 Nanofiber Internal Structure II
@@ -418,8 +433,7 @@ Defender Launcher I x1
 Warp Scrambler II x1`,
 
 			voidrays: `[Kikimora, GSF Standard v23.2]
- 
-Entropic Radiation Sink II
+ Entropic Radiation Sink II
 Entropic Radiation Sink II
 Nanofiber Internal Structure II
 Damage Control II
@@ -446,7 +460,6 @@ Small Gremlin Compact Energy Neutralizer x1
 1MN Y-S8 Compact Afterburner x1`,
 
 			tomahawks: `[Raven Navy Issue, GSF - RNI - DPS - v24.2]
- 
 Damage Control II
 Ballistic Control System II
 Ballistic Control System II
@@ -551,6 +564,96 @@ Magnetic Field Stabilizer II x1
 Sensor Booster II x1
 Large Shield Extender II x1
 Thermal Shield Hardener II x1
+Tracking Computer II x1`,
+
+			malletfleet: `[Ferox, GSF - MALLET FLEET - DPS - V24.1]
+Damage Control II
+Power Diagnostic System II
+Magnetic Field Stabilizer II
+Magnetic Field Stabilizer II
+
+Multispectrum Shield Hardener II
+Large Shield Extender II
+EM Shield Amplifier II
+50MN Y-T8 Compact Microwarpdrive
+Large Shield Extender II
+Multispectrum Shield Hardener II
+
+250mm Railgun II, Caldari Navy Thorium Charge M
+250mm Railgun II, Caldari Navy Thorium Charge M
+250mm Railgun II, Caldari Navy Thorium Charge M
+Small Plasma Smartbomb II
+250mm Railgun II, Caldari Navy Thorium Charge M
+250mm Railgun II, Caldari Navy Thorium Charge M
+250mm Railgun II, Caldari Navy Thorium Charge M
+
+Medium Core Defense Field Extender I
+Medium Core Defense Field Extender I
+Medium Thermal Shield Reinforcer II
+
+
+Warrior II x5
+
+
+Javelin M x1500
+Spike M x2000
+Navy Cap Booster 400 x18
+Caldari Navy Antimatter Charge M x2000
+Caldari Navy Iridium Charge M x2000
+Caldari Navy Iron Charge M x2000
+Caldari Navy Thorium Charge M x2240
+Nanite Repair Paste x20
+ECCM Script x2
+Scan Resolution Script x2
+Targeting Range Script x2
+Optimal Range Script x3
+Tracking Speed Script x3
+Small Capacitor Booster II x1
+Magnetic Field Stabilizer II x1
+Medium Micro Jump Drive x1
+10MN Afterburner II x1
+Sensor Booster II x2
+Kinetic Shield Hardener II x1
+Tracking Computer II x3`,
+			
+			windrunners: `[Tornado, GSF - Nado - V25.1]
+ 
+Inertial Stabilizers II
+Gyrostabilizer II
+Gyrostabilizer II
+Signal Amplifier II
+ 
+Medium Micro Jump Drive
+Tracking Computer II, Optimal Range Script
+Tracking Computer II, Optimal Range Script
+Sensor Booster II, Targeting Range Script
+Sensor Booster II, Scan Resolution Script
+ 
+1400mm 'Scout' Artillery I, Republic Fleet EMP L
+1400mm 'Scout' Artillery I, Republic Fleet EMP L
+1400mm 'Scout' Artillery I, Republic Fleet EMP L
+1400mm 'Scout' Artillery I, Republic Fleet EMP L
+1400mm 'Scout' Artillery I, Republic Fleet EMP L
+1400mm 'Scout' Artillery I, Republic Fleet EMP L
+1400mm 'Scout' Artillery I, Republic Fleet EMP L
+1400mm 'Scout' Artillery I, Republic Fleet EMP L
+ 
+Medium Low Friction Nozzle Joints II
+Medium Low Friction Nozzle Joints II
+Medium Ancillary Current Router I
+ 
+ 
+Republic Fleet Depleted Uranium L x1000
+Republic Fleet EMP L x1000
+Republic Fleet Fusion L x1000
+Republic Fleet Nuclear L x1000
+Republic Fleet Phased Plasma L x1000
+Republic Fleet Proton L x1000
+Republic Fleet Titanium Sabot L x1000
+Scan Resolution Script x2
+Optimal Range Script x1
+Tracking Speed Script x3
+Power Diagnostic System II x2
 Tracking Computer II x1`
 			};
 

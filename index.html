@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Quickfits v1.91</title>
+    <title>Church Quickfits v1.92</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -211,10 +211,34 @@
         </div>
         
         <div class="fit">
-            <h3>GOONS - FIT ME</h3>
-            <p><strong>Ship:</strong> FIT ME</p>
+            <h3>GOONS - SIEGEFLEET</h3>
+            <p><strong>Ship:</strong> Purifier T1</p>
             <pre>Notes: N/A</pre>
-            <button onclick="copyToClipboard(fits.voidrays)">Copy Fit</button>
+            <button onclick="copyToClipboard(fits.purifiert1)">Copy Fit</button>
+        </div>
+		
+		
+		<div class="fit">
+            <h3>GOONS - SIEGEFLEET</h3>
+            <p><strong>Ship:</strong> Purifier T2</p>
+            <pre>Notes: N/A</pre>
+            <button onclick="copyToClipboard(fits.purifiert2)">Copy Fit</button>
+        </div>
+		
+		
+		<div class="fit">
+            <h3>GOONS - SIEGEFLEET</h3>
+            <p><strong>Ship:</strong> Hound T1</p>
+            <pre>Notes: N/A</pre>
+            <button onclick="copyToClipboard(fits.houndt1)">Copy Fit</button>
+        </div>
+		
+		
+		<div class="fit">
+            <h3>GOONS - SIEGEFLEET</h3>
+            <p><strong>Ship:</strong> Hound T2</p>
+            <pre>Notes: N/A</pre>
+            <button onclick="copyToClipboard(fits.houndt2)">Copy Fit</button>
         </div>
     </section>
 </div>
@@ -617,8 +641,7 @@ Kinetic Shield Hardener II x1
 Tracking Computer II x3`,
 			
 			windrunners: `[Tornado, GSF - Nado - V25.1]
- 
-Inertial Stabilizers II
+ Inertial Stabilizers II
 Gyrostabilizer II
 Gyrostabilizer II
 Signal Amplifier II
@@ -654,7 +677,107 @@ Scan Resolution Script x2
 Optimal Range Script x1
 Tracking Speed Script x3
 Power Diagnostic System II x2
-Tracking Computer II x1`
+Tracking Computer II x1`,
+
+			purifiert1: `[Purifier, GSF Siegefleet T1]
+Ballistic Control System II
+Ballistic Control System II
+Micro Auxiliary Power Core I
+ 
+Warp Disruptor II
+Medium Azeotropic Restrained Shield Extender
+5MN Y-T8 Compact Microwarpdrive
+ 
+Bomb Launcher I
+Prototype 'Arbalest' Torpedo Launcher, Mjolnir Torpedo
+Prototype 'Arbalest' Torpedo Launcher, Mjolnir Torpedo
+Prototype 'Arbalest' Torpedo Launcher, Mjolnir Torpedo
+Covert Ops Cloaking Device II
+ 
+Small Processor Overclocking Unit I
+Small Processor Overclocking Unit I
+ 
+ 
+Focused Void Bomb x2
+Nanite Repair Paste x20
+Caldari Navy Mjolnir Torpedo x540
+Mjolnir Torpedo x1080`,
+
+			purifiert2: `[Purifier, GSF Siegefleet]
+ Ballistic Control System II
+Crosslink Compact Ballistic Control System
+Micro Auxiliary Power Core I
+ 
+5MN Y-T8 Compact Microwarpdrive
+Medium F-S9 Regolith Compact Shield Extender
+Initiated Compact Warp Disruptor
+ 
+Torpedo Launcher II, Mjolnir Rage Torpedo
+Torpedo Launcher II, Mjolnir Rage Torpedo
+Torpedo Launcher II, Mjolnir Rage Torpedo
+Bomb Launcher I
+Covert Ops Cloaking Device II
+ 
+Small Processor Overclocking Unit I
+Small Processor Overclocking Unit I
+ 
+ 
+Mjolnir Rage Torpedo x1320
+Focused Void Bomb x2
+Nanite Repair Paste x20
+Caldari Navy Mjolnir Torpedo x480`,
+
+			houndt1: `[Hound, GSF SiegeFleet T1]
+Ballistic Control System II
+Ballistic Control System II
+Micro Auxiliary Power Core II
+ 
+Medium Azeotropic Restrained Shield Extender
+5MN Y-T8 Compact Microwarpdrive
+Remote Sensor Dampener II
+ 
+Prototype 'Arbalest' Torpedo Launcher, Nova Torpedo
+Covert Ops Cloaking Device II
+Prototype 'Arbalest' Torpedo Launcher, Nova Torpedo
+Bomb Launcher I
+Prototype 'Arbalest' Torpedo Launcher, Nova Torpedo
+ 
+Small Processor Overclocking Unit II
+Small Polycarbon Engine Housing I
+ 
+ 
+Focused Void Bomb x2
+Nanite Repair Paste x20
+Scan Resolution Dampening Script x1
+Targeting Range Dampening Script x1
+Caldari Navy Nova Torpedo x540
+Nova Torpedo x1080`,
+
+			houndt2: `[Hound, GSF SiegeFleet]
+Ballistic Control System II
+Ballistic Control System II
+Vigor Compact Micro Auxiliary Power Core
+ 
+Medium F-S9 Regolith Compact Shield Extender
+5MN Y-T8 Compact Microwarpdrive
+Kapteyn Compact Sensor Dampener
+ 
+Torpedo Launcher II, Nova Rage Torpedo
+Torpedo Launcher II, Nova Rage Torpedo
+Torpedo Launcher II, Nova Rage Torpedo
+Covert Ops Cloaking Device II
+Bomb Launcher I
+ 
+Small Processor Overclocking Unit I
+Small Processor Overclocking Unit I
+ 
+ 
+Nova Rage Torpedo x1320
+Focused Void Bomb x2
+Nanite Repair Paste x20
+Scan Resolution Dampening Script x1
+Targeting Range Dampening Script x1
+Caldari Navy Nova Torpedo x480`
 			};
 
         function copyToClipboard(text) {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Quickfits v1.93</title>
+    <title>Ran Squad Fits v0.01</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,9 +34,9 @@
             padding: 15px;
             margin: 15px;
             border-radius: 8px;
-            width: 100%; /* Make it full-width for vertical stacking */
+            width: 100%; 
             box-sizing: border-box;
-            margin-bottom: 20px; /* Add space between each fit block */
+            margin-bottom: 20px;
         }
         .fit h3 {
             margin-top: 0;
@@ -62,7 +62,7 @@
             padding-left: 20px;
         }
         section {
-            margin-bottom: 40px; /* Add space between different sections */
+            margin-bottom: 40px;
         }
         .clearfix::after {
             content: "";
@@ -76,810 +76,71 @@
         <h1>Church of Tranquility</h1>
         <p><em>Si vis pacem, para bellum</em> — "If you want peace, prepare for war" — Publius Flavius Vegetius Renatus</p>
         <p><em>No better pilots I have ever seen than Marelyn and Gary</em> — Diequietly STFU</p>
-	</header>
-	
+    </header>
+
     <div class="container">
-    <!-- Instructions Section -->
-    <div class="instructions">
-        <h3>How to Search a Ship</h3>
-        <ol>
-            <li>Press "CTRL + F".</li>
-            <li>Enter the ship name you're looking for and use the search arrows.</li>
-        </ol>
-        <h3>How to Import a Fitting</h3>
-        <ol>
-            <li>Click the "Copy Fit" button next to the desired fitting.</li>
-            <li>Open EVE Online and go to the fitting window.</li>
-            <li>Click the "Import & Export" arrow (located at the bottom left of the fitting window next to "browse").</li>
-            <li>Select "Import from Clipboard" to add the fitting to your saved fittings.</li>
-        </ol>
+        <!-- Instructions Section -->
+        <div class="instructions">
+            <h3>How to Search a Ship</h3>
+            <ol>
+                <li>Press "CTRL + F".</li>
+                <li>Enter the ship name you're looking for and use the search arrows.</li>
+            </ol>
+            <h3>How to Import a Fitting</h3>
+            <ol>
+                <li>Click the "Copy Fit" button next to the desired fitting.</li>
+                <li>Open EVE Online and go to the fitting window.</li>
+                <li>Click the "Import & Export" arrow (located at the bottom left of the fitting window next to "browse").</li>
+                <li>Select "Import from Clipboard" to add the fitting to your saved fittings.</li>
+            </ol>
+        </div>
+
+        <header>
+            <h2>Goonswarm Doctrines</h2>
+            <p>Use these fits when forming in UALX-3</p>
+        </header>
+
+        <!-- Battleship Section -->
+        <section class="battleship-section">
+            <div class="centered-text">
+                <h2>Battleship</h2>
+            </div>
+
+            <div class="fit">
+                <h3>GOONS - TOMAHAWKS</h3>
+                <p><strong>Ship:</strong> Raven Navy Issue</p>
+                <pre>Notes: Suggested to use implants. Put refit in cargo.</pre>
+                <button onclick="copyToClipboard('tomahawks.txt')">Copy Fit</button>
+            </div>
+
+            <div class="fit">
+                <h3>GOONS - SUPERTRAINS</h3>
+                <p><strong>Ship:</strong> Rohk</p>
+                <pre>Notes: Suggested to use implants. Put refit in cargo.</pre>
+                <button onclick="copyToClipboard('supertrains.txt')">Copy Fit</button>
+            </div>
+        </section>
+
+        <!-- Add more sections as necessary -->
     </div>
 
-    <header>
-        <h2>Goonswarm Doctrines</h2>
-        <p>Use these fits when forming in UALX-3</p>
-    </header>
-    
-    <!-- Battleship Section -->
-    <section class="battleship-section">
-        <div class="centered-text">
-            <h2>Battleship</h2>
-        </div>
-    
-        <div class="fit">
-            <h3>GOONS - TOMAHAWKS</h3>
-            <p><strong>Ship:</strong> Raven Navy Issue</p>
-            <pre>Notes: Suggested to use implants. Put refit in cargo.</pre>
-            <button onclick="copyToClipboard(fits.tomahawks)">Copy Fit</button>
-        </div> 
-
- 
-        <div class="fit">
-            <h3>GOONS - SUPERTRAINS</h3>
-            <p><strong>Ship:</strong> Rohk</p>
-            <pre>Notes: Suggested to use implants. Put refit in cargo.</pre>
-            <button onclick="copyToClipboard(fits.supertrains)">Copy Fit</button>
-        </div>   		
-    </section>
-
-    <!-- Battlecruiser Section -->
-    <section class="battlecruiser-section">
-        <div class="centered-text">
-            <h2>Battlecruiser</h2>
-        </div>
-        
-        <div class="fit">
-            <h3>GOONS - DAKKAFLEET</h3>
-            <p><strong>Ship:</strong> Sleipnir</p>
-            <pre>Notes: Put refit modules in cargo.</pre>
-            <button onclick="copyToClipboard(fits.sleipnir)">Copy Fit</button>
-        </div>
-
-        
-        <div class="fit">
-            <h3>GOONS - CFIS</h3>
-            <p><strong>Ship:</strong> Cyclone Fleet Issue</p>
-            <pre>Notes: N/A</pre>
-            <button onclick="copyToClipboard(fits.cfis)">Copy Fit</button>
-        </div>
-
-        
-        <div class="fit">
-            <h3>GOONS - HAMMERFLEET</h3>
-            <p><strong>Ship:</strong> Ferox Navy Issue</p>
-            <pre>Notes: Put refit modules in cargo.</pre>
-            <button onclick="copyToClipboard(fits.hammerfleet)">Copy Fit</button>
-        </div>
-		
-		
-		<div class="fit">
-            <h3>GOONS - MALLETFLEET</h3>
-            <p><strong>Ship:</strong> Ferox</p>
-            <pre>Notes: If short on power use EG-603 implant (train Advanced Weapon Upgrades to 5 you noob).</pre>
-            <button onclick="copyToClipboard(fits.malletfleet)">Copy Fit</button>
-        </div>
-		
-		
-		<div class="fit">
-            <h3>GOONS - WINDRUNNERS</h3>
-            <p><strong>Ship:</strong> Tornado</p>
-            <pre>Notes: Put refit modules in cargo.</pre>
-            <button onclick="copyToClipboard(fits.windrunners)">Copy Fit</button>
-        </div>
-    </section>
-
-    <!-- Cruiser Section -->
-    <section class="cruiser-section">
-        <div class="centered-text">
-            <h2>Cruiser</h2>
-        </div>
-        
-		<div class="fit">
-            <h3>GOONS - ENIS</h3>
-            <p><strong>Ship:</strong> Exequror Navy Issue</p>
-            <pre>Notes: N/A</pre>
-            <button onclick="copyToClipboard(fits.enis)">Copy Fit</button>
-        </div>
-    </section>
-	
-	<!-- Destroyer Section -->
-	<section class="destroyer-section">
-        <div class="centered-text">
-            <h2>Destroyer</h2>
-        </div>
-        
-		<div class="fit">
-            <h3>GOONS - FLYCATCHERS</h3>
-            <p><strong>Ship:</strong> Flycatcher</p>
-            <pre>Notes: Defender Launcher in cargo. Fit meta Shield Extender if over power.</pre>
-            <button onclick="copyToClipboard(fits.flycatchers)">Copy Fit</button>
-        </div>
-		
-		
-		<div class="fit">
-            <h3>GOONS - VOID RAYS</h3>
-            <p><strong>Ship:</strong> Kikimora</p>
-            <pre>Notes: Put refit modules in cargo.</pre>
-            <button onclick="copyToClipboard(fits.voidrays)">Copy Fit</button>
-        </div>
-    </section>
-	
-	<!-- Frigate Section -->
-	<section class="frigate-section">
-        <div class="centered-text">
-            <h2>Frigate</h2>
-        </div>
-        
-        <div class="fit">
-            <h3>GOONS - SIEGEFLEET</h3>
-            <p><strong>Ship:</strong> Purifier T1</p>
-            <pre>Notes: N/A</pre>
-            <button onclick="copyToClipboard(fits.purifiert1)">Copy Fit</button>
-        </div>
-		
-		
-		<div class="fit">
-            <h3>GOONS - SIEGEFLEET</h3>
-            <p><strong>Ship:</strong> Purifier T2</p>
-            <pre>Notes: N/A</pre>
-            <button onclick="copyToClipboard(fits.purifiert2)">Copy Fit</button>
-        </div>
-		
-		
-		<div class="fit">
-            <h3>GOONS - SIEGEFLEET</h3>
-            <p><strong>Ship:</strong> Hound T1</p>
-            <pre>Notes: N/A</pre>
-            <button onclick="copyToClipboard(fits.houndt1)">Copy Fit</button>
-        </div>
-		
-		
-		<div class="fit">
-            <h3>GOONS - SIEGEFLEET</h3>
-            <p><strong>Ship:</strong> Hound T2</p>
-            <pre>Notes: N/A</pre>
-            <button onclick="copyToClipboard(fits.houndt2)">Copy Fit</button>
-        </div>
-    </section>
-	
-	<!-- Booster Section -->
-	<section class="booster-section">
-        <div class="centered-text">
-            <h2>Booster</h2>
-        </div>
-        
-        <div class="fit">
-            <h3>GOONS - BOOSTERS</h3>
-            <p><strong>Ship:</strong> Bifrost</p>
-            <pre>Notes: Put refit modules in cargo. Usable in Harpy and Flycatcher fleets.</pre>
-            <button onclick="copyToClipboard(fits.bifrost)">Copy Fit</button>
-        </div>
-		
-		
-		<div class="fit">
-            <h3>GOONS - BOOSTERS</h3>
-            <p><strong>Ship:</strong> Stork</p>
-            <pre>Notes: Put refit modules in cargo. Use Mindlink. Usable in Harpy and Flycatcher fleets.</pre>
-            <button onclick="copyToClipboard(fits.stork)">Copy Fit</button>
-        </div>
-    </section>
-</div>
-
-
     <script>
-        // fits define
-        const fits = {
-            sleipnir: `[Sleipnir, GSF - DAKKA - DPS V23.1]
-Gyrostabilizer II
-Gyrostabilizer II
-Nanofiber Internal Structure II
-Damage Control II
-Tracking Enhancer II
+        const GITHUB_BASE_URL = "https://github.com/Garypls/Church-Quickfit/tree/main/fits/";
 
-Large Shield Extender II
-Multispectrum Shield Hardener II
-Large Shield Extender II
-Multispectrum Shield Hardener II
-50MN Quad LiF Restrained Microwarpdrive
+        function copyToClipboard(fileName) {
+            const fileUrl = `${GITHUB_BASE_URL}${fileName}`;
 
-720mm Howitzer Artillery II, Republic Fleet Fusion M
-720mm Howitzer Artillery II, Republic Fleet Fusion M
-Drone Link Augmentor II
-720mm Howitzer Artillery II, Republic Fleet Fusion M
-Small Energy Neutralizer II
-720mm Howitzer Artillery II, Republic Fleet Fusion M
-720mm Howitzer Artillery II, Republic Fleet Fusion M
-
-Medium Core Defense Field Extender II
-Medium Core Defense Field Extender II
-
-Warrior II x5
-
-Quake M x2000
-Tremor M x1200
-Nanite Repair Paste x100
-Republic Fleet Carbonized Lead M x1200
-Republic Fleet Depleted Uranium M x1200
-Republic Fleet EMP M x1200
-Republic Fleet Fusion M x1200
-Republic Fleet Phased Plasma M x1200
-Republic Fleet Proton M x1200
-Republic Fleet Titanium Sabot M x1200
-Active Shielding Charge x600
-Shield Extension Charge x600
-Shield Harmonizing Charge x600
-Evasive Maneuvers Charge x600
-Interdiction Maneuvers Charge x600
-Rapid Deployment Charge x600
-Agency 'Pyrolancea' DB3 Dose I x1
-Shield Command Burst II x1
-Skirmish Command Burst II x1
-Nanofiber Internal Structure II x1
-Power Diagnostic System II x2
-Small EMP Smartbomb II x1
-Tracking Enhancer II x1`,
-
-            cfis: `[Cyclone Fleet Issue, CFI]
-Damage Control II
-Signal Amplifier II
-Ballistic Control System II
-Ballistic Control System II
-Ballistic Control System II
-
-Large Shield Extender II
-Large Shield Extender II
-Large Compact Pb-Acid Cap Battery
-Multispectrum Shield Hardener II
-50MN Quad LiF Restrained Microwarpdrive
-
-Heavy Missile Launcher II
-Heavy Missile Launcher II
-Heavy Missile Launcher II
-Heavy Missile Launcher II
-Heavy Missile Launcher II
-Heavy Missile Launcher II
-Small Energy Neutralizer II
-Small Energy Neutralizer II
-
-Medium EM Shield Reinforcer II
-Medium Thermal Shield Reinforcer II
-Medium Hydraulic Bay Thrusters II
-
-Valkyrie II x5
-
-Scourge Fury Heavy Missile x1440
-Caldari Navy Mjolnir Heavy Missile x1440
-Caldari Navy Nova Heavy Missile x1440
-Caldari Navy Scourge Heavy Missile x1440
-Caldari Navy Inferno Heavy Missile x1680
-Nova Fury Heavy Missile x1440
-Nanite Repair Paste x100
-Mjolnir Fury Heavy Missile x1440
-Inferno Fury Heavy Missile x1440
-Synth Crash Booster x1
-Agency 'Pyrolancea' DB3 Dose I x1`,
-
-            hammerfleet: `[Ferox Navy Issue, FNI]
-Damage Control II
-Magnetic Field Stabilizer II
-Magnetic Field Stabilizer II
-Magnetic Field Stabilizer II
-
-Large Shield Extender II
-Large Shield Extender II
-Multispectrum Shield Hardener II
-50MN Quad LiF Restrained Microwarpdrive
-Small Capacitor Booster II
-EM Shield Hardener II
-Thermal Shield Hardener II
-
-250mm Railgun II
-250mm Railgun II
-250mm Railgun II
-250mm Railgun II
-250mm Railgun II
-250mm Railgun II
-Drone Link Augmentor II
-
-Medium Core Defense Field Extender I
-Medium Core Defense Field Extender I
-Medium Core Defense Field Extender I
-
-Warrior II x5
-
-Javelin M x1920
-Spike M x1920
-Navy Cap Booster 400 x23
-Caldari Navy Antimatter Charge M x1920
-Caldari Navy Uranium Charge M x1680
-Caldari Navy Thorium Charge M x1680
-Caldari Navy Iridium Charge M x1920
-Nanite Repair Paste x50
-Caldari Navy Iron Charge M x960
-Synth Frentix Booster x1
-Agency 'Pyrolancea' DB3 Dose I x1
-Multispectrum Shield Hardener II x1
-Small Energy Neutralizer II x1
-Tracking Enhancer II x1`,
-
-			enis: `[Exequror Navy Issue, ENI]
-Damage Control II
-Multispectrum Energized Membrane II
-Multispectrum Energized Membrane II
-Magnetic Field Stabilizer II
-Magnetic Field Stabilizer II
-1600mm Rolled Tungsten Compact Plates
-
-50MN Y-T8 Compact Microwarpdrive
-Alumel-Wired Enduring Sensor Booster
-Small F-RX Compact Capacitor Booster
-Tracking Computer II
-
-250mm Railgun II
-250mm Railgun II
-250mm Railgun II
-250mm Railgun II
-Small Gremlin Compact Energy Neutralizer
-
-Medium Ancillary Current Router I
-Medium Trimark Armor Pump I
-Medium Trimark Armor Pump I
-
-
-
-Acolyte II x5
-
-Spike M x1800
-Navy Cap Booster 400 x30
-Caldari Navy Antimatter Charge M x1760
-Tracking Speed Script x1
-Optimal Range Script x1
-Targeting Range Script x1
-Scan Resolution Script x1
-Caldari Navy Thorium Charge M x640
-Caldari Navy Iridium Charge M x640
-Nanite Repair Paste x100
-Agency 'Pyrolancea' DB3 Dose I x1`,
-
-			flycatchers: `[Flycatcher, GSF - Flycatchers - DPS V23.1]
-Co-Processor II
-
-Enduring Multispectrum Shield Hardener
-EM Shield Amplifier II
-5MN Quad LiF Restrained Microwarpdrive
-Medium Shield Extender II
-Missile Guidance Computer II
-
-Light Missile Launcher II
-Light Missile Launcher II
-Light Missile Launcher II
-Light Missile Launcher II
-Light Missile Launcher II
-Light Missile Launcher II
-Light Missile Launcher II
-Interdiction Sphere Launcher I
-
-Small Ancillary Current Router I
-Small Hydraulic Bay Thrusters II
-
-
-Scourge Fury Light Missile x3000
-Scourge Precision Light Missile x500
-Defender Missile I x40
-Stasis Webification Probe x20
-Warp Disrupt Probe x45
-Caldari Navy Inferno Light Missile x500
-Caldari Navy Mjolnir Light Missile x500
-Caldari Navy Nova Light Missile x500
-Caldari Navy Scourge Light Missile x2500
-Missile Precision Script x1
-Missile Range Script x1
-Nanite Repair Paste x50
-Defender Launcher I x1
-Warp Scrambler II x1`,
-
-			voidrays: `[Kikimora, GSF Standard v23.2]
- Entropic Radiation Sink II
-Entropic Radiation Sink II
-Nanofiber Internal Structure II
-Damage Control II
- 
-Multispectrum Shield Hardener II
-Medium Azeotropic Restrained Shield Extender
-5MN Y-T8 Compact Microwarpdrive
- 
-[Empty High slot]
-Light Entropic Disintegrator II, Occult S
- 
-Small EM Shield Reinforcer I
-Small Core Defense Field Extender I
-Small Core Defense Field Extender I
- 
- 
-Mystic S x3000
-Occult S x3000
-Baryon Exotic Plasma S x3000
-Meson Exotic Plasma S x3000
-Tetryon Exotic Plasma S x3000
-Nanite Repair Paste x100
-Small Gremlin Compact Energy Neutralizer x1
-1MN Y-S8 Compact Afterburner x1`,
-
-			tomahawks: `[Raven Navy Issue, GSF - RNI - DPS - v24.2]
-Damage Control II
-Ballistic Control System II
-Ballistic Control System II
-Ballistic Control System II
-Signal Amplifier II
- 
-Multispectrum Shield Hardener II
-Heavy Capacitor Booster II
-Large Shield Extender II
-500MN Quad LiF Restrained Microwarpdrive
-Large Shield Extender II
-Large Shield Extender II
-Multispectrum Shield Hardener II
- 
-Cruise Missile Launcher II
-Cruise Missile Launcher II
-Cruise Missile Launcher II
-Cruise Missile Launcher II
-Cruise Missile Launcher II
-Cruise Missile Launcher II
-Cruise Missile Launcher II
-Cruise Missile Launcher II
- 
-Large Core Defense Field Extender I
-Large Core Defense Field Extender I
-Large Core Defense Field Extender I
- 
- 
-Warrior II x5
-Valkyrie II x5
-Hornet EC-300 x5
- 
- 
-Inferno Fury Cruise Missile x864
-Mjolnir Fury Cruise Missile x864
-Nova Fury Cruise Missile x864
-Scourge Fury Cruise Missile x648
-Navy Cap Booster 800 x13
-Caldari Navy Inferno Cruise Missile x1080
-Caldari Navy Mjolnir Cruise Missile x1080
-Caldari Navy Nova Cruise Missile x1080
-Caldari Navy Scourge Cruise Missile x1080
-Missile Precision Script x1
-Missile Range Script x1
-Nanite Repair Paste x50
-Scan Resolution Script x1
-Targeting Range Script x1
-Agency 'Pyrolancea' DB3 Dose I x1
-Missile Guidance Computer II x1
-Missile Guidance Enhancer II x2
-Sensor Booster II x1
-EM Shield Hardener II x1
-Signal Amplifier II x1`,
-
-			supertrains: `[Rokh, SuperTrain mk 4A]
-Damage Control II
-Magnetic Field Stabilizer II
-Magnetic Field Stabilizer II
-Signal Amplifier II
- 
-Multispectrum Shield Hardener II
-Large Shield Extender II
-Medium Capacitor Booster II
-100MN Afterburner II
-EM Shield Hardener II
-Large Shield Extender II
-Multispectrum Shield Hardener II
- 
-425mm Railgun II
-425mm Railgun II
-425mm Railgun II
-425mm Railgun II
-425mm Railgun II
-425mm Railgun II
-425mm Railgun II
-425mm Railgun II
- 
-Large Core Defense Field Extender I
-Large Core Defense Field Extender I
-Large Core Defense Field Extender I
- 
- 
-Warrior II x5
-Curator II x3
-Hornet EC-300 x5
- 
- 
-Javelin L x960
-Spike L x3200
-Navy Cap Booster 800 x18
-Caldari Navy Antimatter Charge L x3200
-Caldari Navy Iridium Charge L x960
-Caldari Navy Iron Charge L x960
-Caldari Navy Thorium Charge L x1600
-ECCM Script x1
-Targeting Range Script x1
-Optimal Range Script x1
-Tracking Speed Script x1
-Improved Frentix Booster x2
-Magnetic Field Stabilizer II x1
-500MN Quad LiF Restrained Microwarpdrive x1
-Sensor Booster II x1
-Large Shield Extender II x1
-Thermal Shield Hardener II x1
-Tracking Computer II x1`,
-
-			malletfleet: `[Ferox, GSF - MALLET FLEET - DPS - V24.1]
-Damage Control II
-Power Diagnostic System II
-Magnetic Field Stabilizer II
-Magnetic Field Stabilizer II
-
-Multispectrum Shield Hardener II
-Large Shield Extender II
-EM Shield Amplifier II
-50MN Y-T8 Compact Microwarpdrive
-Large Shield Extender II
-Multispectrum Shield Hardener II
-
-250mm Railgun II, Caldari Navy Thorium Charge M
-250mm Railgun II, Caldari Navy Thorium Charge M
-250mm Railgun II, Caldari Navy Thorium Charge M
-Small Plasma Smartbomb II
-250mm Railgun II, Caldari Navy Thorium Charge M
-250mm Railgun II, Caldari Navy Thorium Charge M
-250mm Railgun II, Caldari Navy Thorium Charge M
-
-Medium Core Defense Field Extender I
-Medium Core Defense Field Extender I
-Medium Thermal Shield Reinforcer II
-
-
-Warrior II x5
-
-
-Javelin M x1500
-Spike M x2000
-Navy Cap Booster 400 x18
-Caldari Navy Antimatter Charge M x2000
-Caldari Navy Iridium Charge M x2000
-Caldari Navy Iron Charge M x2000
-Caldari Navy Thorium Charge M x2240
-Nanite Repair Paste x20
-ECCM Script x2
-Scan Resolution Script x2
-Targeting Range Script x2
-Optimal Range Script x3
-Tracking Speed Script x3
-Small Capacitor Booster II x1
-Magnetic Field Stabilizer II x1
-Medium Micro Jump Drive x1
-10MN Afterburner II x1
-Sensor Booster II x2
-Kinetic Shield Hardener II x1
-Tracking Computer II x3`,
-			
-			windrunners: `[Tornado, GSF - Nado - V25.1]
- Inertial Stabilizers II
-Gyrostabilizer II
-Gyrostabilizer II
-Signal Amplifier II
- 
-Medium Micro Jump Drive
-Tracking Computer II, Optimal Range Script
-Tracking Computer II, Optimal Range Script
-Sensor Booster II, Targeting Range Script
-Sensor Booster II, Scan Resolution Script
- 
-1400mm 'Scout' Artillery I, Republic Fleet EMP L
-1400mm 'Scout' Artillery I, Republic Fleet EMP L
-1400mm 'Scout' Artillery I, Republic Fleet EMP L
-1400mm 'Scout' Artillery I, Republic Fleet EMP L
-1400mm 'Scout' Artillery I, Republic Fleet EMP L
-1400mm 'Scout' Artillery I, Republic Fleet EMP L
-1400mm 'Scout' Artillery I, Republic Fleet EMP L
-1400mm 'Scout' Artillery I, Republic Fleet EMP L
- 
-Medium Low Friction Nozzle Joints II
-Medium Low Friction Nozzle Joints II
-Medium Ancillary Current Router I
- 
- 
-Republic Fleet Depleted Uranium L x1000
-Republic Fleet EMP L x1000
-Republic Fleet Fusion L x1000
-Republic Fleet Nuclear L x1000
-Republic Fleet Phased Plasma L x1000
-Republic Fleet Proton L x1000
-Republic Fleet Titanium Sabot L x1000
-Scan Resolution Script x2
-Optimal Range Script x1
-Tracking Speed Script x3
-Power Diagnostic System II x2
-Tracking Computer II x1`,
-
-			purifiert1: `[Purifier, GSF Siegefleet T1]
-Ballistic Control System II
-Ballistic Control System II
-Micro Auxiliary Power Core I
- 
-Warp Disruptor II
-Medium Azeotropic Restrained Shield Extender
-5MN Y-T8 Compact Microwarpdrive
- 
-Bomb Launcher I
-Prototype 'Arbalest' Torpedo Launcher, Mjolnir Torpedo
-Prototype 'Arbalest' Torpedo Launcher, Mjolnir Torpedo
-Prototype 'Arbalest' Torpedo Launcher, Mjolnir Torpedo
-Covert Ops Cloaking Device II
- 
-Small Processor Overclocking Unit I
-Small Processor Overclocking Unit I
- 
- 
-Focused Void Bomb x2
-Nanite Repair Paste x20
-Caldari Navy Mjolnir Torpedo x540
-Mjolnir Torpedo x1080`,
-
-			purifiert2: `[Purifier, GSF Siegefleet]
- Ballistic Control System II
-Crosslink Compact Ballistic Control System
-Micro Auxiliary Power Core I
- 
-5MN Y-T8 Compact Microwarpdrive
-Medium F-S9 Regolith Compact Shield Extender
-Initiated Compact Warp Disruptor
- 
-Torpedo Launcher II, Mjolnir Rage Torpedo
-Torpedo Launcher II, Mjolnir Rage Torpedo
-Torpedo Launcher II, Mjolnir Rage Torpedo
-Bomb Launcher I
-Covert Ops Cloaking Device II
- 
-Small Processor Overclocking Unit I
-Small Processor Overclocking Unit I
- 
- 
-Mjolnir Rage Torpedo x1320
-Focused Void Bomb x2
-Nanite Repair Paste x20
-Caldari Navy Mjolnir Torpedo x480`,
-
-			houndt1: `[Hound, GSF SiegeFleet T1]
-Ballistic Control System II
-Ballistic Control System II
-Micro Auxiliary Power Core II
- 
-Medium Azeotropic Restrained Shield Extender
-5MN Y-T8 Compact Microwarpdrive
-Remote Sensor Dampener II
- 
-Prototype 'Arbalest' Torpedo Launcher, Nova Torpedo
-Covert Ops Cloaking Device II
-Prototype 'Arbalest' Torpedo Launcher, Nova Torpedo
-Bomb Launcher I
-Prototype 'Arbalest' Torpedo Launcher, Nova Torpedo
- 
-Small Processor Overclocking Unit II
-Small Polycarbon Engine Housing I
- 
- 
-Focused Void Bomb x2
-Nanite Repair Paste x20
-Scan Resolution Dampening Script x1
-Targeting Range Dampening Script x1
-Caldari Navy Nova Torpedo x540
-Nova Torpedo x1080`,
-
-			houndt2: `[Hound, GSF SiegeFleet]
-Ballistic Control System II
-Ballistic Control System II
-Vigor Compact Micro Auxiliary Power Core
- 
-Medium F-S9 Regolith Compact Shield Extender
-5MN Y-T8 Compact Microwarpdrive
-Kapteyn Compact Sensor Dampener
- 
-Torpedo Launcher II, Nova Rage Torpedo
-Torpedo Launcher II, Nova Rage Torpedo
-Torpedo Launcher II, Nova Rage Torpedo
-Covert Ops Cloaking Device II
-Bomb Launcher I
- 
-Small Processor Overclocking Unit I
-Small Processor Overclocking Unit I
- 
- 
-Nova Rage Torpedo x1320
-Focused Void Bomb x2
-Nanite Repair Paste x20
-Scan Resolution Dampening Script x1
-Targeting Range Dampening Script x1
-Caldari Navy Nova Torpedo x480`,
-
-			bifrost: `[Bifrost, GSF - Flycatchers - Boost - V23.1]
-Damage Control II
-Co-Processor II
-Power Diagnostic System II
-
-5MN Quad LiF Restrained Microwarpdrive
-Republic Fleet Medium Shield Extender
-Republic Fleet Medium Shield Extender
-Enduring Multispectrum Shield Hardener
-Enduring Multispectrum Shield Hardener
-
-Arbalest Compact Light Missile Launcher
-Defender Launcher I, Defender Missile I
-Skirmish Command Burst II
-Skirmish Command Burst II
-Shield Command Burst II /OFFLINE
-Shield Command Burst II /OFFLINE
-
-Small Command Processor I
-Small Core Defense Field Extender II
-
-
-Defender Missile I x100
-Scourge Light Missile x120
-Nanite Repair Paste x100
-Active Shielding Charge x600
-Shield Extension Charge x600
-Shield Harmonizing Charge x600
-Evasive Maneuvers Charge x600
-Interdiction Maneuvers Charge x600
-Rapid Deployment Charge x600
-Micro Jump Field Generator x1
-Overdrive Injector System II x1
-1MN Afterburner II x1
-Reactor Control Unit II x1`,
-
-			stork: `[Stork, GSF - Flycatchers - Boost - V23.1]
-Damage Control II
-Mark I Compact Power Diagnostic System
-
-Multispectrum Shield Hardener II
-Small F-S9 Regolith Compact Shield Extender
-EM Shield Amplifier II
-5MN Quad LiF Restrained Microwarpdrive
-Medium Shield Extender II
-Medium Shield Extender II
-
-Information Command Burst II
-Information Command Burst II
-Defender Launcher I
-[Empty High slot]
-Shield Command Burst II, Shield Extension Charge /OFFLINE
-Shield Command Burst II, Shield Harmonizing Charge /OFFLINE
-
-Small Core Defense Field Extender II
-Small Command Processor I
-
-
-Information Command Mindlink
-
-
-Defender Missile I x100
-Electronic Hardening Charge x2000
-Electronic Superiority Charge x2000
-Sensor Optimization Charge x2000
-Nanite Repair Paste x100
-Active Shielding Charge x2000
-Shield Extension Charge x2000
-Shield Harmonizing Charge x2000
-1MN Afterburner II x1`
-			};
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Fit copied to clipboard!');
-            }).catch(err => {
-                console.error('Copy failed:', err);
-                alert('Failed to copy fit: ' + err);
-            });
+            fetch(fileUrl)
+                .then(response => {
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return response.text();
+                })
+                .then(text => {
+                    navigator.clipboard.writeText(text)
+                        .then(() => alert('Fit copied to clipboard!'))
+                        .catch(err => alert('Failed to copy fit: ' + err));
+                })
+                .catch(err => alert('Failed to load fit: ' + err));
         }
     </script>
 </body>

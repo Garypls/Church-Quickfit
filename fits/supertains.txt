@@ -1,0 +1,51 @@
+[Rokh, SuperTrain mk 4A]
+Damage Control II
+Magnetic Field Stabilizer II
+Magnetic Field Stabilizer II
+Signal Amplifier II
+ 
+Multispectrum Shield Hardener II
+Large Shield Extender II
+Medium Capacitor Booster II
+100MN Afterburner II
+EM Shield Hardener II
+Large Shield Extender II
+Multispectrum Shield Hardener II
+ 
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+425mm Railgun II
+ 
+Large Core Defense Field Extender I
+Large Core Defense Field Extender I
+Large Core Defense Field Extender I
+ 
+ 
+Warrior II x5
+Curator II x3
+Hornet EC-300 x5
+ 
+ 
+Javelin L x960
+Spike L x3200
+Navy Cap Booster 800 x18
+Caldari Navy Antimatter Charge L x3200
+Caldari Navy Iridium Charge L x960
+Caldari Navy Iron Charge L x960
+Caldari Navy Thorium Charge L x1600
+ECCM Script x1
+Targeting Range Script x1
+Optimal Range Script x1
+Tracking Speed Script x1
+Improved Frentix Booster x2
+Magnetic Field Stabilizer II x1
+500MN Quad LiF Restrained Microwarpdrive x1
+Sensor Booster II x1
+Large Shield Extender II x1
+Thermal Shield Hardener II x1
+Tracking Computer II x1
